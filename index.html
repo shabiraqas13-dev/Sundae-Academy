@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sundae Academy - Joyful Learning</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins & Fredoka for playful cute look -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sundae: {
+                            cream: '#FDFBF7',
+                            brown: '#8B5A2B',
+                            lightBrown: '#D2B48C',
+                            pink: '#FFB6C1',
+                            purple: '#D8BFD8',
+                            darkPurple: '#9370DB',
+                            accent: '#FFF0F5'
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        fredoka: ['Fredoka', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FDFBF7;
+            color: #5c4033;
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Fredoka', sans-serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFF0F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D8BFD8;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9370DB;
+        }
+    </style>
+</head>
+<body class="bg-[#FDFBF7] text-[#8B5A2B] antialiased selection:bg-[#FFB6C1] selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-[#FDFBF7]/90 backdrop-blur-md border-b border-[#F5E6D3] transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo Area -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-full bg-[#FFF0F5] border-2 border-[#D8BFD8] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-ice-cream text-[#9370DB] text-xl"></i>
+                </div>
+                <div>
+                    <span class="font-heading text-xl sm:text-2xl tracking-wide text-[#8B5A2B] block">SUNDAE ACADEMY</span>
+                    <span class="text-xs text-[#9370DB] font-medium tracking-widest uppercase">Joyful Learning</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium">
+                <a href="#hero" class="hover:text-[#9370DB] transition-colors">Home</a>
+                <a href="#about" class="hover:text-[#9370DB] transition-colors">About</a>
+                <a href="#programs" class="hover:text-[#9370DB] transition-colors">Programs</a>
+                <a href="#gallery" class="hover:text-[#9370DB] transition-colors">Gallery</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-[#9370DB] text-white hover:bg-[#8355cb] shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">Contact Us</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-[#8B5A2B] focus:outline-none p-2 rounded-xl bg-[#FFF0F5]">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#FDFBF7] border-b border-[#F5E6D3] px-6 py-4 space-y-3 font-medium">
+            <a href="#hero" class="block py-2 hover:text-[#9370DB]">Home</a>
+            <a href="#about" class="block py-2 hover:text-[#9370DB]">About</a>
+            <a href="#programs" class="block py-2 hover:text-[#9370DB]">Programs</a>
+            <a href="#gallery" class="block py-2 hover:text-[#9370DB]">Gallery</a>
+            <a href="#contact" class="block text-center py-2.5 rounded-full bg-[#9370DB] text-white shadow">Contact Us</a>
+        </div>
+    </header>
+
+    <section id="hero" class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32 bg-gradient-to-b from-[#FFF0F5] to-[#FDFBF7]">
+        <!-- Decorative blobs -->
+        <div class="absolute top-10 left-10 w-72 h-72 bg-[#D8BFD8]/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-[#FFB6C1]/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center md:text-left">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#D8BFD8] text-sm font-medium text-[#9370DB] shadow-sm">
+                        <i class="fa-solid fa-heart text-[#FFB6C1]"></i> Welcome to Shabira's Project
+                    </span>
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl text-[#8B5A2B] leading-tight">
+                        Sweet Learning Experience & <span class="text-[#9370DB]">Joyful Growth</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-[#8B5A2B]/80 max-w-lg mx-auto md:mx-0">
+                        Text coming soon... Discover a delightful way of exploring new knowledge wrapped in sweet pastel vibes and interactive learning journeys.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
+                        <a href="#programs" class="px-8 py-3.5 rounded-full bg-[#9370DB] text-white font-medium shadow-lg hover:bg-[#8253c4] transition-all transform hover:-translate-y-1 text-center">
+                            Explore Programs
+                        </a>
+                        <a href="#contact" class="px-8 py-3.5 rounded-full bg-white border-2 border-[#D8BFD8] text-[#8B5A2B] font-medium shadow-sm hover:bg-[#FFF0F5] transition-all text-center">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image Illustration Area -->
+                <div class="flex justify-center">
+                    <div class="relative w-full max-w-md aspect-square bg-gradient-to-tr from-[#FFB6C1]/30 via-[#D8BFD8]/30 to-[#FFF0F5] rounded-3xl p-8 border-4 border-white shadow-xl flex items-center justify-center">
+                        <div class="absolute inset-4 border-2 border-dashed border-[#D8BFD8] rounded-2xl flex flex-col items-center justify-center text-center p-6 bg-white/50 backdrop-blur-sm">
+                            <div class="w-24 h-24 rounded-full bg-[#FFF0F5] border border-[#D8BFD8] flex items-center justify-center mb-4 shadow-inner">
+                                <i class="fa-solid fa-graduation-cap text-4xl text-[#9370DB]"></i>
+                            </div>
+                            <h3 class="font-heading text-2xl text-[#8B5A2B] mb-2">Sundae Academy</h3>
+                            <p class="text-sm text-[#8B5A2B]/70">Text coming soon... Custom hero image or branding asset goes here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest px-3 py-1 bg-[#FFF0F5] text-[#9370DB] rounded-full font-semibold">About Us</span>
+                <h2 class="font-heading text-3xl sm:text-4xl text-[#8B5A2B]">Where Fun Meets Knowledge</h2>
+                <p class="text-[#8B5A2B]/80 text-base sm:text-lg">Text coming soon... Here you can write a warm introduction about your academy, vision, and mission.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-[#FDFBF7] p-8 rounded-3xl border border-[#F5E6D3] shadow-sm hover:shadow-md transition-all text-center group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-[#FFF0F5] border border-[#D8BFD8] flex items-center justify-center text-[#9370DB] text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="font-heading text-xl text-[#8B5A2B] mb-3">Joyful Growth</h3>
+                    <p class="text-sm text-[#8B5A2B]/70">Text coming soon... Detail about nurturing growth and enjoyable learning steps.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-[#FFF0F5]/50 p-8 rounded-3xl border border-[#D8BFD8]/50 shadow-sm hover:shadow-md transition-all text-center group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-white border border-[#D8BFD8] flex items-center justify-center text-[#9370DB] text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="font-heading text-xl text-[#8B5A2B] mb-3">Creative Classes</h3>
+                    <p class="text-sm text-[#8B5A2B]/70">Text coming soon... Detail about creative workshops and interactive modules.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-[#FDFBF7] p-8 rounded-3xl border border-[#F5E6D3] shadow-sm hover:shadow-md transition-all text-center group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-[#FFF0F5] border border-[#D8BFD8] flex items-center justify-center text-[#9370DB] text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                    <h3 class="font-heading text-xl text-[#8B5A2B] mb-3">Cozy Community</h3>
+                    <p class="text-sm text-[#8B5A2B]/70">Text coming soon... Detail about warm peer support and friendly mentors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="py-20 bg-gradient-to-b from-white to-[#FFF0F5]/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div class="space-y-4 max-w-xl">
+                    <span class="text-xs uppercase tracking-widest px-3 py-1 bg-[#D8BFD8]/30 text-[#9370DB] rounded-full font-semibold">Our Offerings</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl text-[#8B5A2B]">Featured Programs & Classes</h2>
+                    <p class="text-[#8B5A2B]/80">Text coming soon... Explore various sweet learning paths curated specially for you.</p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-[#9370DB] hover:underline">
+                        View all classes <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product/Feature Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-[#F5E6D3] shadow-sm hover:shadow-xl transition-all flex flex-col">
+                    <div class="h-48 bg-[#FFF0F5] relative flex items-center justify-center border-b border-[#F5E6D3]">
+                        <div class="w-20 h-20 rounded-full bg-white shadow-md flex items-center justify-center text-[#9370DB] text-3xl">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-[#9370DB] text-white text-xs px-3 py-1 rounded-full font-medium">Popular</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-heading text-xl text-[#8B5A2B] mb-2">Program Vanilla Scoop</h3>
+                            <p class="text-sm text-[#8B5A2B]/70">Text coming soon... Short description of this foundational program or course.</p>
+                        </div>
+                        <div class="pt-4 border-t border-[#F5E6D3] flex items-center justify-between">
+                            <span class="text-sm font-semibold text-[#9370DB]">Open Registration</span>
+                            <a href="#contact" class="px-4 py-2 rounded-xl bg-[#FFF0F5] hover:bg-[#9370DB] hover:text-white text-[#9370DB] text-sm font-medium transition-all">Enroll</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-[#F5E6D3] shadow-sm hover:shadow-xl transition-all flex flex-col">
+                    <div class="h-48 bg-[#D8BFD8]/20 relative flex items-center justify-center border-b border-[#F5E6D3]">
+                        <div class="w-20 h-20 rounded-full bg-white shadow-md flex items-center justify-center text-[#9370DB] text-3xl">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-[#FFB6C1] text-white text-xs px-3 py-1 rounded-full font-medium">Interactive</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-heading text-xl text-[#8B5A2B] mb-2">Strawberry Sundae Lab</h3>
+                            <p class="text-sm text-[#8B5A2B]/70">Text coming soon... Short description of interactive learning workshop.</p>
+                        </div>
+                        <div class="pt-4 border-t border-[#F5E6D3] flex items-center justify-between">
+                            <span class="text-sm font-semibold text-[#9370DB]">Limited Seats</span>
+                            <a href="#contact" class="px-4 py-2 rounded-xl bg-[#FFF0F5] hover:bg-[#9370DB] hover:text-white text-[#9370DB] text-sm font-medium transition-all">Enroll</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden border border-[#F5E6D3] shadow-sm hover:shadow-xl transition-all flex flex-col">
+                    <div class="h-48 bg-[#FFB6C1]/20 relative flex items-center justify-center border-b border-[#F5E6D3]">
+                        <div class="w-20 h-20 rounded-full bg-white shadow-md flex items-center justify-center text-[#9370DB] text-3xl">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="absolute top-4 right-4 bg-[#8B5A2B] text-white text-xs px-3 py-1 rounded-full font-medium">Advanced</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-heading text-xl text-[#8B5A2B] mb-2">Choco Masterclass</h3>
+                            <p class="text-sm text-[#8B5A2B]/70">Text coming soon... Short description of masterclass or special session.</p>
+                        </div>
+                        <div class="pt-4 border-t border-[#F5E6D3] flex items-center justify-between">
+                            <span class="text-sm font-semibold text-[#9370DB]">Coming Soon</span>
+                            <a href="#contact" class="px-4 py-2 rounded-xl bg-[#FFF0F5] hover:bg-[#9370DB] hover:text-white text-[#9370DB] text-sm font-medium transition-all">Notify Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest px-3 py-1 bg-[#FFF0F5] text-[#9370DB] rounded-full font-semibold">Gallery</span>
+                <h2 class="font-heading text-3xl sm:text-4xl text-[#8B5A2B]">Sweet Moments & Highlights</h2>
+                <p class="text-[#8B5A2B]/80 text-base">Text coming soon... A glimpse into our daily activities and joyful experiences.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="h-48 rounded-2xl bg-[#FFF0F5] border border-[#D8BFD8] flex flex-col items-center justify-center text-center p-4">
+                    <i class="fa-regular fa-image text-3xl text-[#9370DB] mb-2"></i>
+                    <span class="text-xs text-[#8B5A2B]/70">Photo 1 Placeholder</span>
+                </div>
+                <div class="h-48 rounded-2xl bg-[#D8BFD8]/20 border border-[#D8BFD8] flex flex-col items-center justify-center text-center p-4">
+                    <i class="fa-regular fa-image text-3xl text-[#9370DB] mb-2"></i>
+                    <span class="text-xs text-[#8B5A2B]/70">Photo 2 Placeholder</span>
+                </div>
+                <div class="h-48 rounded-2xl bg-[#FFB6C1]/20 border border-[#FFB6C1] flex flex-col items-center justify-center text-center p-4">
+                    <i class="fa-regular fa-image text-3xl text-[#9370DB] mb-2"></i>
+                    <span class="text-xs text-[#8B5A2B]/70">Photo 3 Placeholder</span>
+                </div>
+                <div class="h-48 rounded-2xl bg-[#FFF0F5] border border-[#D8BFD8] flex flex-col items-center justify-center text-center p-4">
+                    <i class="fa-regular fa-image text-3xl text-[#9370DB] mb-2"></i>
+                    <span class="text-xs text-[#8B5A2B]/70">Photo 4 Placeholder</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gradient-to-b from-[#FFF0F5] to-[#F5E6D3]/40 pt-20 pb-12 border-t border-[#F5E6D3]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-center">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-white border border-[#D8BFD8] flex items-center justify-center shadow-sm">
+                            <i class="fa-solid fa-ice-cream text-[#9370DB] text-xl"></i>
+                        </div>
+                        <span class="font-heading text-2xl text-[#8B5A2B]">SUNDAE ACADEMY</span>
+                    </div>
+                    <p class="text-[#8B5A2B]/80 max-w-md">
+                        Text coming soon... Feel free to reach out for inquiries, collaborations, or general questions about Shabira's Project.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-[#D8BFD8] flex items-center justify-center text-[#9370DB] hover:bg-[#9370DB] hover:text-white transition-all shadow-sm">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-[#D8BFD8] flex items-center justify-center text-[#9370DB] hover:bg-[#9370DB] hover:text-white transition-all shadow-sm">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-[#D8BFD8] flex items-center justify-center text-[#9370DB] hover:bg-[#9370DB] hover:text-white transition-all shadow-sm">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form Mock -->
+                <div class="bg-white p-8 rounded-3xl border border-[#F5E6D3] shadow-md">
+                    <h3 class="font-heading text-2xl text-[#8B5A2B] mb-6">Send Us a Message</h3>
+                    <form onsubmit="event.preventDefault(); showMessageBox();" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-[#8B5A2B] mb-1">Your Name</label>
+                            <input type="text" placeholder="Enter your name" class="w-full px-4 py-3 rounded-xl border border-[#F5E6D3] bg-[#FDFBF7] focus:outline-none focus:ring-2 focus:ring-[#9370DB] text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-[#8B5A2B] mb-1">Email / Contact</label>
+                            <input type="email" placeholder="Enter your email" class="w-full px-4 py-3 rounded-xl border border-[#F5E6D3] bg-[#FDFBF7] focus:outline-none focus:ring-2 focus:ring-[#9370DB] text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-[#8B5A2B] mb-1">Message</label>
+                            <textarea rows="3" placeholder="Text coming soon..." class="w-full px-4 py-3 rounded-xl border border-[#F5E6D3] bg-[#FDFBF7] focus:outline-none focus:ring-2 focus:ring-[#9370DB] text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 rounded-xl bg-[#9370DB] text-white font-medium hover:bg-[#8355cb] transition-all shadow-sm">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-[#F5E6D3] text-center text-sm text-[#8B5A2B]/60 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Sundae Academy (Shabira's Project). All rights reserved.</p>
+                <p>Designed with pastel sweetness &hearts;</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Notification Box (No alert() used) -->
+    <div id="msg-box" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 bg-white border border-[#D8BFD8] shadow-2xl rounded-2xl p-4 flex items-center gap-3 max-w-sm">
+        <div class="w-10 h-10 rounded-full bg-[#FFF0F5] flex items-center justify-center text-[#9370DB] text-lg shrink-0">
+            <i class="fa-solid fa-heart"></i>
+        </div>
+        <div>
+            <h4 class="font-heading text-sm text-[#8B5A2B]">Message Received!</h4>
+            <p class="text-xs text-[#8B5A2B]/70">Thank you! Your message has been simulated successfully.</p>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle functionality
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Safe Custom Message Box function instead of alert()
+        function showMessageBox() {
+            const box = document.getElementById('msg-box');
+            box.classList.remove('translate-y-32', 'opacity-0');
+            setTimeout(() => {
+                box.classList.add('translate-y-32', 'opacity-0');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
